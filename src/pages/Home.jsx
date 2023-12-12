@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import MovieCard from "../components/MovieCard";
+import { FaStar } from "react-icons/fa";
 
 import './MoviesGrid.css'
 
@@ -26,7 +27,7 @@ const Home = () => {
 
     return (
         <div className="container">
-            <h2 className="title">Best movies by rating:</h2>
+            <h2 className="title"><FaStar color="#ffd12a" /> Best movies by rating:</h2>
             <div className="movies-container">
                 {topMovies.length === 0 && <p>Loading...</p>}
                 {topMovies.length > 0 && topMovies.map((movie) => <MovieCard key={movie.id} movie={movie} />)}
